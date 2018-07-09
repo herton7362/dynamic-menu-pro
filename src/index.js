@@ -15,9 +15,6 @@ const app = dva({
   history: createHistory(),
 });
 
-console.log(ROOT_PATH); // eslint-disable-line
-console.log(NO_PROXY); // eslint-disable-line
-
 // 2. Plugins
 app.use(createLoading());
 
