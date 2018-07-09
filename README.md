@@ -11,5 +11,5 @@ router相当于后端的Controller，定义好了项目提供哪些页面以及�
 
 具体修改文件请看下图
 
-![](https://github.com/herton7362/dynamic-menu-pro/git.png)
+![](https://github.com/herton7362/dynamic-menu-pro/raw/master/git.png)
 
