@@ -31,14 +31,17 @@ export const getMeunMatcheys = (flatMenuKeys, path) => {
 export default class SiderMenu extends PureComponent {
   constructor(props) {
     super(props);
-    this.menus = props.menuData;
     this.flatMenuKeys = this.getFlatMenuKeys(props.menuData);
+    this.menus = props.menuData;
     this.state = {
       openKeys: this.getDefaultCollapsedSubMenus(props),
     };
   }
   componentWillReceiveProps(nextProps) {
-    if (nextProps.location.pathname !== this.props.location.pathname) {
+    if ('menuData' in nextProps) {
+      const { menuData = [] } = nextProps;
+      this.flatMenuKeys = this.getFlatMenuKeys(menuData);
+      this.menus = menuData;
       this.setState({
         openKeys: this.getDefaultCollapsedSubMenus(nextProps),
       });
